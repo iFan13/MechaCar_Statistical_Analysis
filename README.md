@@ -35,14 +35,33 @@ The design specifications for the MechaCar suspension coils dictate that the var
 
 ## T-Tests on Suspension Coils
 
-With the variance of lot 3 being exposed, there is curiosity on how the lot passed the inspection process. It is possible that the mean PSI per lot is used in the inspection process then. Below are four T-tests: Full sample with respects to it's population mean, and comparisons of the full sample's mean lot1, lot2, and lot3.
+With the variance of lot 3 being exposed, there is curiosity on how the lot passed the inspection process. It is possible that the mean PSI per lot is used in the inspection process then. Below are four T-tests: Full sample with respects to the [provided sample's population](Suspension_Coil.csv) mean, and comparisons of the full sample's mean lot1, lot2, and lot3.
 
 ![Full Sample T-Test](/Resources/TTestAll.PNG)
 ![Lot1 T-Test](/Resources/TTestLot1.PNG)
 ![Lot2 T-Test](/Resources/TTestLot2.PNG)
 ![Lot3 T-Test](/Resources/TTestLot3.PNG)
 
-The null hypothesis of each of the T-tests's can be interpreted as "The true mean is equal to 1498.78". In the full sample test, since the reference to itself, it cannot be used to evaluate. However with the individual lots, it is possible to evaluate the hypothesis. For lot 1, the p-value is less than 0.05%, we therefore reject this null hypothesis and accept the alternative hypothesis. For lot 2, the p-value is also less than 0.05% but it is getting closer implying that the confidence of the statement is not as strong. For lot 3, the p-value is higher than 0.05% which means the null hypothesis cannot be accepted.
+The null hypothesis for each of the T-tests with respect to the provided sample is "The true mean is equal to 1498.78".
+
+* In the test of all to sample mean, the t-value is 0 suggesting the null hypothesis is true and the p-value is 1 (or 100%) suggesting the test is effective. However, this would be an expected result since the sample mean references itself.
+* In the test of lot1 to sample mean, the t-value is not 0 suggesting the null hypothesis is false and the p-value is less than 0.05% suggesting that the test iseffective  given the significance of 0.05%.
+* In the test of lot2 to sample mean, the t-value is not 0 suggesting the null hypothesis is false and the p-value is less than 0.05% suggesting the test is effective given the significance of 0.05%.
+* In the test of lot3 to sample mean, the t-value is not 0 suggesting the null hypothesis is false and the p-value is greater than 0.05% suggesting that the test is not effective given the significance of 0.05%.
+
+However, the total population mean has been revealed to be 1500. Thus it would be prudent to use the full population's mean (shown below)
+
+![Full Population T-Test](/Resources/TTestAll1500.PNG)
+![Lot11500 T-Test](/Resources/TTestLot11500.PNG)
+![Lot21500 T-Test](/Resources/TTestLot21500.PNG)
+![Lot31500 T-Test](/Resources/TTestLot31500.PNG)
+
+The null hypothesis for each of the T-tests with respect to the provided population mean of 1500 is "The true mean is equal to 1500".
+
+* In the test of all to population mean, the t-value is not 0 suggesting the null hypothesis is false and the p-value is greater than 0.05% suggesting that the test is not effective given the significance of 0.05%
+* In the test of lot1 to population mean, the t-value is 0 suggesting the null hypothesis is true and the p-value is 1 or 100% suggesting the test is effective. Because lot1 is a subset of the sample of the population, this test and information is useful and suggests lot 1 is good to use.
+* In the test of lot2 to population mean, the t-value is not 0 suggesting the null hypothesis is false and the p-value is greater than 0.05% suggesting that the test is not effective.
+* In the test of lot3 to population mean, the t-value is not 0 suggesting the null hypothesis is false and the p-value is less than 0.05% suggesting that the test is effective.
 
 ## Study Design: MechaCar vs Competition
 
